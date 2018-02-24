@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_score_tracker"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="scoretracker.robert.scheffel.eu.scoretraker.activity.StartUp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <GridLayout
+            android:id="@+id/grid_pakour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="1">
+
+
+            <TextView
+                android:id="@+id/txt_pakour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="9"
+                android:inputType="none"
+                android:text="@string/txtParcour"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+            <Button
+                android:id="@+id/btn_select_parcour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="3dp"
+                android:ems="9"
+                android:text="@string/btnChange"
+                />
+
+            <TextView
+                android:id="@+id/txt_selected_pakour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="9"
+                android:inputType="none"
+                android:text="@string/txtSelectedPacour"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/grid_scores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/grid_pakour"
+
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="1">
+
+            <TextView
+                android:id="@+id/txt_scores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="9"
+                android:inputType="none"
+                android:text="@string/txtScores"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+            <Button
+                android:id="@+id/btn_add_scores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="3dp"
+                android:ems="9"
+                android:text="@string/add_new"
+                android:textAlignment="center" />
+        </GridLayout>
+
+        <Spinner
+            android:id="@+id/sp_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/grid_scores" />
+
+        <GridLayout
+            android:id="@+id/grid_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sp_score"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="1">
+
+            <TextView
+                android:id="@+id/txt_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="none"
+                android:text="@string/txtUser"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+
+            <Button
+                android:id="@+id/btn_adduser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="3dp"
+                android:ems="10"
+                android:text="@string/add_new"
+                android:textAlignment="center" />
+        </GridLayout>
+
+        <ListView
+            android:id="@+id/lv_users"
+            android:layout_width="match_parent"
+            android:layout_height="353dp"
+            android:layout_below="@+id/grid_user"
+            android:choiceMode="multipleChoiceModal"
+            android:ems="10"
+            android:listSelector="#666666"></ListView>
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lv_users"
+            android:text="@string/btnStart" />
+    </RelativeLayout>
+
+</ScrollView>

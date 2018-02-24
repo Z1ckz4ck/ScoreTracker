@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ScoreTraker</string>
+    <string name="title_activity_user_new">Create New User</string>
+    <string name="txtUser">User</string>
+    <string name="btnStart">Start</string>
+    <string name="btnSaveUser">Save</string>
+    <string name="txtEMail">E-Mail</string>
+    <string name="txtFirstname">Firstname</string>
+    <string name="txtLastname">Lastname</string>
+    <string name="btnSaveUserAndAdd"><![CDATA[Speichern & weiteren hinzufügen]]></string>
+    <string name="btnConfigUser">Config</string>
+    <string name="btnSave">Save</string>
+    <string name="btnDelete">Delete</string>
+    <string name="txtParcour">Parcour</string>
+    <string name="valid_e_mail">Valid E-Mail Adress is required!</string>
+    <string name="close">Close</string>
+    <string name="btnChange">Change</string>
+    <string name="txtScores">Scores</string>
+    <string name="add_new">ADD NEW</string>
+    <string name="txtChoosePacour">Select the Pacour</string>
+    <string name="nr">Nr.</string>
+    <string name="count_targets">Count Targets</string>
+    <string name="create_new_parcour">Create New Parcour</string>
+    <string name="title_activity_Scores_new">Scores</string>
+    <string name="title_activity_SelectPacour">Select Pacour</string>
+    <string name="hintName">Name</string>
+    <string name="btnCreate">Create</string>
+    <string name="txtSelectedPacour">Non selected</string>
+    <string name="select_parcour">Select a Parcour</string>
+
+    <string name="title_activity_active_parcour">ActiveParcour</string>
+</resources>
