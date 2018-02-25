@@ -41,6 +41,7 @@ public class ScoreTrackerService extends Application {
 
     public synchronized List<User> refreshAndgetAllUser() {
         return dbHandlerUser.getAllUser();
+        //return new ArrayList<>();
     }
 
     public synchronized void deleteUser(User user) {

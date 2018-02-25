@@ -7,5 +7,5 @@ package scoretracker.robert.scheffel.eu.scoretraker.utils;
 public class Constants {
     private Constants(){}
 
-    public static final int DB_VERSION = 3;
+    public static final int DB_VERSION = 1;
 }

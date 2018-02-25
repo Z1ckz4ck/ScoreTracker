@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.nfc.Tag;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +21,9 @@ import scoretracker.robert.scheffel.eu.scoretraker.utils.Constants;
 public class DbHandlerUser extends SQLiteOpenHelper {
     //DB
     private static final String DB_NAME = "ScoreTrackerDB";
+    private static final int DB_VERSION=5;
     //Table name
-    private static final String TABLE_USER = "USER_TAB";
+    private static final String TABLE_USER = "USERS_TAB";
     ///Table Colums
     private static final String USER_ID = "user_id";
     private static final String FIRSTNAME = "firstname";
@@ -29,19 +32,20 @@ public class DbHandlerUser extends SQLiteOpenHelper {
 
 
     public DbHandlerUser(Context context) {
-        super(context, DB_NAME, null, Constants.DB_VERSION);
+        super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + "(" + USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + EMail + " TEXT NOT" +
+        String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + " (" + USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + EMail + " TEXT NOT" +
                 " NULL, " + FIRSTNAME + " TEXT, " + LASTNAME + " TEXT)";
         db.execSQL(CREATE_USER_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
         //create table
         onCreate(db);

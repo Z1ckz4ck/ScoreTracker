@@ -13,7 +13,6 @@
         <activity android:name=".activity.StartUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -32,7 +31,6 @@
             android:name=".activity.SelectParcour"
             android:label="@string/title_activity_SelectPacour"
             android:theme="@style/AppTheme"></activity>
-
     </application>
 
 </manifest>
